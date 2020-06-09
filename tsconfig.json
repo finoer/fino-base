@@ -24,14 +24,14 @@
     "paths": {
       "@root/*": ["./*"],
       "@/*": ["src/*"],
-      "Packs": ["../../packages/"],
+      "Packs/*": ["../../packages/*"],
       "@test/*": ["test/*"]
     }
   },
-  "include": ["src", "test","../../packages/finoer-core/src/*.ts"],
+  "include": ["src", "test", "../../packages/finoer-core/src/*.ts"],
   // typedoc
   "typedocOptions": {
-    "inputFiles": ["src"],
+    "inputFiles": ["src","../../packages/finoer-core/src/*.ts"],
     "out": "docs",
     "mode": "file",
     "theme": "default"

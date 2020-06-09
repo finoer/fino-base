@@ -20,4 +20,4 @@ export default class Main {
  //  let bb:ba = new ba();
 
    a.setName("132")
-   a.getName()
+   a.getName222();
