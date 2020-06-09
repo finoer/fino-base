@@ -4,8 +4,13 @@ const resolve = require('../utils/resolve')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const devPlugins = [
-  	new webpack.HotModuleReplacementPlugin(),
-  	new CopyWebpackPlugin(	  
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"development"'
+      }
+    }),
+  	new CopyWebpackPlugin(
 
 		{
 			patterns: [
@@ -15,11 +20,11 @@ const devPlugins = [
 					globOptions:{
 						ignore: ['.*']
 					}
-				} 
+				}
 			]
 
 		}
-	
+
 	)
 ]
 

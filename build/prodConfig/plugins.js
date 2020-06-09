@@ -1,9 +1,14 @@
 const commonPlugins = require('../commonPlugins')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const webpack = require('webpack')
 
 const prodPlugins = [
-
-new CopyWebpackPlugin(	  
+  new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: '"production"'
+    }
+  }),
+  new CopyWebpackPlugin(
     {
         patterns: [
             {
@@ -12,7 +17,7 @@ new CopyWebpackPlugin(
             }
         ]
     }
- )
+  )
 ]
 
 const pluginsConfig = [...commonPlugins, ...prodPlugins]
