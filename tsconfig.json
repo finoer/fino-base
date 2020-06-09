@@ -14,21 +14,26 @@
       "ESNext",
       "dom"
     ],
+    "outDir": "./dist/",
+    "allowJs": true,
     "strict": true,
     "sourceMap": true,
-    "declaration": true,
-    "declarationDir": "dist/types",
+    "rootDir": "../../",
     "typeRoots": ["node_modules/@types"],
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "paths": {
       "@root/*": ["./*"],
       "@/*": ["src/*"],
-      "Packs": ["../../packages/"],
+      "Packs/*": ["../../packages/*"],
       "@test/*": ["test/*"]
     }
   },
   "include": ["src", "test","../../packages/finoer-core/src/*.ts"],
+  "files": [],
+  "references": [
+    { "path": "../../packages/finoer-core" },
+    ],
   // typedoc
   "typedocOptions": {
     "inputFiles": ["src"],
