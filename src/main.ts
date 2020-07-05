@@ -4,22 +4,29 @@
  * @since 2020.01.01
  */
 import Finoer from 'Packs/finoer-core'
-import A from 'Packs/finoer-lib';
+import { Main } from 'Packs/finoer-lib';
+import A from 'Packs/startup'
 
 
 export default class Main1 {
-    public static main(): void {
-      console.log("ok")
-    }
+  public static main(): void {
+    console.log("ok")
+  }
 }
 
 
 Main1.main();
-let fino:Finoer = new Finoer()
+let fino: Finoer = new Finoer()
 console.log('fino', fino)
 fino.setName('yueqi')
 
-// let main: A.Main = new A.Main()
-// var main: A.Main = new A.Main()
-// console.log('main', main)
+let main: Main = new Main()
+console.log('main', main)
+
+
+let startup = new A()
+
+console.log('startup', startup)
+
+console.log(A)
 
