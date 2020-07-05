@@ -5,7 +5,7 @@
  */
 import Finoer from 'Packs/finoer-core'
 import { Main } from 'Packs/finoer-lib';
-import A from 'Packs/startup'
+import { Startup, HelloWorld } from 'Packs/package-startup'
 
 
 export default class Main1 {
@@ -23,10 +23,8 @@ fino.setName('yueqi')
 let main: Main = new Main()
 console.log('main', main)
 
-
-let startup = new A()
+let startup: Startup = new Startup();
 
 console.log('startup', startup)
 
-console.log(A)
-
+console.log('hellow world', HelloWorld)
