@@ -9,6 +9,11 @@ const devServerConfig = {
     //   target: 'http://x.com.cn',
     //   changeOrigin: true
     // }
+    '/rest/gw/homework-service': {
+      target: 'https://lc.vipkid.com.cn/',
+      changeOrigin: true,
+      logLevel: 'debug',
+    },
   },
   overlay: {
     errors: true

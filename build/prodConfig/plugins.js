@@ -14,7 +14,11 @@ const prodPlugins = [
             {
                 from: './src/img',
                 to: './img'
-            }
+            },
+            {
+              from: './static',
+              to: './static'
+          },
         ]
     }
   )

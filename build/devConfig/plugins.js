@@ -20,7 +20,14 @@ const devPlugins = [
 					globOptions:{
 						ignore: ['.*']
 					}
-				}
+        },
+        {
+          from: resolve('src/static'),
+          to: resolve('dist'),
+          globOptions:{
+						ignore: ['.*']
+					}
+        },
 			]
 
 		}
