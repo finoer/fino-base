@@ -4,35 +4,23 @@
  * @since 2020.01.01
  *
  */
-import { invoke, registerApps } from 'Packs/finoer-invoke'
-import { LoaderOper } from 'Packs/finoer-lib'
+import { invoke, registerApps, $data } from 'Packs/finoer-invoke'
 import projectList from '../project'
 import Loading from './utils/loading'
 
+
+console.log($data, invoke, registerApps, 111)
 // 注册应用
-registerApps(projectList)
+// registerApps(projectList)
 
-// const loader = new LoaderOper('http://localhost:8080/app.js', () => {
-//   console.log('加载子应用js成功了·········')
-//   // @ts-ignore
-//   console.log(arguments)
-// }, () => {})
+// const loading = new Loading();
 
-// debugger
-// loader.timeout = 500
-// loader.execute()
+// invoke.$event.subscribe('appEnter', () => {
+//   loading.hide()
+// })
 
-// console.log('LoaderOper', loader)
-
-
-const loading = new Loading();
-
-invoke.$event.subscribe('appEnter', () => {
-  loading.hide()
-})
-
-invoke.$event.subscribe('appLeave', () => {
-  loading.show()
-})
+// invoke.$event.subscribe('appLeave', () => {
+//   loading.show()
+// })
 
 

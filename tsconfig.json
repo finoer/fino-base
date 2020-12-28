@@ -42,18 +42,13 @@
     "include": [
         "src",
         "test",
-        "../../packages/finoer-core/src/*.ts",
-        "../../packages/finoer-lib/src/*.ts",
         "../../packages/startup/src/*.ts"
-
     ],
     // "files": [
 
     // ],
     "references": [
-        {
-            "path": "../../packages/finoer-core"
-        }
+
         
     ],
     // typedoc

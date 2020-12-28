@@ -1,31 +1,16 @@
 const projectList = [
   {
-    name: 'yueqi1',
+    name: 'yueqi',
     activeWhen: function (location: Location) {
-      const route= window.location.href.split(window.location.origin)[1]
-      return route.startsWith('/yueqi')
+      const route= window.location.href.split(window.location.origin)[1].split('/')[1]
+      return route === 'yueqi'
     },
     domain: "http://localhost:8080",
-    entry: '/rcms/stats.js',
-  },
-  {
-    name: 'jinzhao',
-    activeWhen: function (location: Location) {
-      const route= window.location.href.split(window.location.origin)[1]
-      return route.startsWith('/jinzhao')
-    },
-    domain: "http://localhost:8081",
-    entry: '/rcms/stats.js',
-  },
-  {
-    name: 'blue',
-    activeWhen: function (location: Location) {
-      const route= window.location.href.split(window.location.origin)[1]
-      return route.startsWith('/blue')
-    },
-    domain: "http://localhost:8007",
-    entry: '/rcms/stats.js',
+    entry: '/yueqi/stats.js',
+    prop: {},
+    "context": "vue",
+    "version": "2.6.2"
   },
 ]
 
-export default projectList
+export default []
