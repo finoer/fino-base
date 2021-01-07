@@ -18,25 +18,12 @@
         "allowJs": true,
         "strict": true,
         "sourceMap": true,
-        "rootDir": "../../",
         "typeRoots": [
             "node_modules/@types"
         ],
         "allowSyntheticDefaultImports": true,
-        "baseUrl": "../../",
         "paths": {
-            "@root/*": [
-                "./*"
-            ],
-            "@/*": [
-                "src/*"
-            ],
-            "Packs/*": [
-                "./packages/*"
-            ],
-            "@test/*": [
-                "test/*"
-            ]
+       
         }
     },
     "include": [
@@ -47,10 +34,6 @@
     // "files": [
 
     // ],
-    "references": [
-
-        
-    ],
     // typedoc
     "typedocOptions": {
         "inputFiles": [
