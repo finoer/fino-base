@@ -118,6 +118,6 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "@finoer/finoer-invoke": "^0.0.7"
+    "@finoer/finoer-invoke": "^0.0.9"
   }
 }

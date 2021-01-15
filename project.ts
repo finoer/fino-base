@@ -2,10 +2,10 @@ const projectList = [
   {
       name: 'plantform_list',
       activeWhen: function (location: Location) {
-        const route= window.location.href.split(window.location.origin)[1].split('/')[1]
+        const route = window.location.href.split(window.location.origin)[1].split('/')[1]
         return route === 'plantform_list'
       },
-      domain: "http://localhost:8080",
+      domain: "http://localhost:8081",
       entry: '/plantform_list/stats.js',
       prop: {},
       "context": "vue",
@@ -18,20 +18,22 @@ const projectList = [
       const route= window.location.href.split(window.location.origin)[1].split('/')[1]
       return route === 'yueqi'
     },
-    domain: "http://localhost:8081",
+    domain: "http://localhost:8082",
     entry: '/yueqi/stats.js',
     prop: {},
     "context": "vue",
-        "version": "2.6.2"
+    "version": "2.6.2"
   },
   {
-    name: 'jinzhao',
+    name: 'phaser',
     activeWhen: function (location: Location) {
       const route= window.location.href.split(window.location.origin)[1].split('/')[1]
-      return route === '/jinzhao'
+      return route === 'phaser'
     },
-    domain: "http://localhost:8081",
-    entry: '/rcms/stats.js',
+    domain: "http://localhost:8007",
+    entry: '/phaser/stats.js',
+    "context": "phaser",
+    "version": "3.23.0"
   },
   {
     name: 'blue',

@@ -12,15 +12,15 @@ import Loading from './utils/loading'
 // 注册应用
 registerApps(projectList)
 
-const loading = new Loading();
+// const loading = new Loading();
 
-invoke.$event.subscribe('appEnter', () => {
-  loading.hide()
-})
+// invoke.$event.subscribe('appEnter', () => {
+//   loading.hide()
+// })
 
-invoke.$event.subscribe('appLeave', () => {
-  loading.show()
-})
+// invoke.$event.subscribe('appLeave', () => {
+//   loading.show()
+// })
 
 const plantformTreeData = {
   projects: [
@@ -32,9 +32,34 @@ const plantformTreeData = {
                 children: [
                     {
                       name: 'template1',
+                      props: [
+                        {
+                          key: 'current',
+                          type: 'number',
+                          require: true,
+                          spacename: 'global',
+                          description: ''
+                        },
+                        {
+                          key: 'total',
+                          type: 'number',
+                          require: true,
+                          spacename: 'template1',
+                          description: ''
+                        },
+                      ]
                     },
                     {
                       name: 'template2',
+                      props: [
+                        {
+                          key: 'current',
+                          type: 'number',
+                          require: true,
+                          spacename: 'global',
+                          description: ''
+                        }
+                      ]
                     }
                 ]
             }
@@ -51,7 +76,6 @@ const plantformTreeData = {
   current: {}
 };
 
-// console.log('改动测试')
 // 初始化数据仓库
 const router = new Router(projectList, plantformTreeData)
 
