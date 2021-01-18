@@ -18,7 +18,7 @@ const projectList = [
       const route= window.location.href.split(window.location.origin)[1].split('/')[1]
       return route === 'yueqi'
     },
-    domain: "http://localhost:8082",
+    domain: "http://localhost:8081",
     entry: '/yueqi/stats.js',
     prop: {},
     "context": "vue",
