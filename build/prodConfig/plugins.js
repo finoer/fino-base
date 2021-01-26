@@ -10,16 +10,16 @@ const prodPlugins = [
   }),
   new CopyWebpackPlugin(
     {
-        patterns: [
-            {
-                from: './src/img',
-                to: './img'
-            },
-            {
-              from: './static',
-              to: './static'
-          },
-        ]
+      patterns: [
+        {
+          from: './src/img',
+          to: './img'
+        },
+        {
+          from: './src/static',
+          to: './static'
+        },
+      ]
     }
   )
 ]

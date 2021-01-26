@@ -12,6 +12,7 @@ import Loading from './utils/loading'
 // 注册应用
 registerApps(projectList)
 
+invoke.mode = "safe"
 
 const plantformTreeData = {
   projects: [

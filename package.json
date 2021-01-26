@@ -29,7 +29,6 @@
     "typedoc": "typedoc",
     "lint": "eslint --fix 'src/**/*.ts' 'test/**/*.ts'",
     "test": "jest",
-    "dev:all": "concurrently \"npm run dev\" \"tsc -b -w --force --verbose\"",
     "test:watch": "jest --watch",
     "prebuild": "rimraf dist",
     "precommit": "lint-staged",
@@ -37,7 +36,7 @@
     "start": "npm run dev",
     "_publish": "npm run build && npm version patch -f && npm publish && npm run push",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --progress --config build/webpack.config.js",
-    "build:prod": "cross-env NODE_ENV=production webpack --config build/webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.js",
     "clean": "rimraf output",
     "init": "npm install",
     "push": "git pull && git add . && git commit -m 'update' && git push"
@@ -79,7 +78,6 @@
     "commitizen": "^3.0.0",
     "compress": "^0.99.0",
     "compression-webpack-plugin": "^4.0.0",
-    "concurrently": "^5.2.0",
     "copy-webpack-plugin": "^6.0.1",
     "cross-env": "^7.0.2",
     "cz-conventional-changelog": "^2.1.0",
@@ -101,10 +99,6 @@
     "lodash.camelcase": "^4.3.0",
     "prettier": "^1.14.3",
     "rimraf": "^2.6.2",
-    "rollup": "2.3.4",
-    "rollup-plugin-sourcemaps": "^0.6.2",
-    "rollup-plugin-terser": "^6.1.0",
-    "rollup-plugin-typescript2": "^0.27.1",
     "ts-jest": "^23.10.2",
     "ts-loader": "^7.0.5",
     "ts-node": "^7.0.1",
@@ -118,6 +112,6 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "@finoer/finoer-invoke": "^0.0.9"
+    "@finoer/finoer-invoke": "^0.0.13"
   }
 }

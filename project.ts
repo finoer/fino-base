@@ -25,15 +25,15 @@ const projectList = [
     "version": "2.6.2"
   },
   {
-    name: 'phaser',
+    name: 'jinzhao',
     activeWhen: function (location: Location) {
       const route= window.location.href.split(window.location.origin)[1].split('/')[1]
-      return route === 'phaser'
+      return route === 'jinzhao'
     },
-    domain: "http://localhost:8007",
-    entry: '/phaser/stats.js',
-    "context": "phaser",
-    "version": "3.23.0"
+    domain: "http://localhost:8082",
+    entry: '/jinzhao/stats.js',
+    "context": "vue",
+    "version": "2.6.2"
   },
   {
     name: 'blue',
