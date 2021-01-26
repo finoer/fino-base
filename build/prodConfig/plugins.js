@@ -3,25 +3,21 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack')
 
 const prodPlugins = [
-  new webpack.DefinePlugin({
-    'process.env': {
-      NODE_ENV: '"production"'
-    }
-  }),
-  new CopyWebpackPlugin(
-    {
-      patterns: [
+    new webpack.DefinePlugin({
+        'process.env': {
+            NODE_ENV: '"production"'
+        }
+    }),
+    new CopyWebpackPlugin(
         {
-          from: './src/img',
-          to: './img'
-        },
-        {
-          from: './src/static',
-          to: './static'
-        },
-      ]
-    }
-  )
+            patterns: [
+                {
+                    from: './src/static',
+                    to: './static'
+                },
+            ]
+        }
+    )
 ]
 
 const pluginsConfig = [...commonPlugins, ...prodPlugins]
