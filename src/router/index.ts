@@ -1,8 +1,8 @@
-import { router } from "@finoer/finoer-invoke";
+import { router, $data} from "@finoer/finoer-invoke";
 import { Project } from "@finoer/finoer-invoke/dist/src/types/project";
 import BaseRouter from "./base";
 
-class Router extends BaseRouter {
+class Router extends BaseRouter{
   // 已经注册过的项目列表
   public projectMap: Map<string, Project>
 
@@ -26,7 +26,7 @@ class Router extends BaseRouter {
   }
 
   push(type: string) {
-    switch (type) {
+    switch(type) {
       case 'next':
         this.next();
         break;
@@ -41,9 +41,21 @@ class Router extends BaseRouter {
     router.push(`/${name}`)
   }
 
-  next() { }
+  next() {
+    const current = $data.plantform.current
 
-  back() { }
+    if(current.next) {
+      router.push(`/${current.next}`)
+    }
+  }
+
+  back() {
+    const current = $data.plantform.current
+
+    if(current.return) {
+      router.push(`/${current.return}`)
+    }
+  }
 
 }
 
