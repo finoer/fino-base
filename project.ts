@@ -5,11 +5,23 @@ const projectList = [
         const route = window.location.href.split(window.location.origin)[1].split('/')[1]
         return route === 'plantform_list'
       },
-      domain: "http://localhost:8081",
+      domain: "http://localhost:8080",
       entry: '/plantform_list/stats.js',
       prop: {},
       "context": "vue",
       "version": "2.6.2"
+  },
+  {
+    // http://localhost:8080/lc-fino-module-phaser/stats.js
+    name: 'phaser',
+    activeWhen: function (location: Location) {
+      const route = window.location.href.split(window.location.origin)[1].split('/')[1]
+      return route === 'phaser'
+    },
+    domain: " http://localhost:8080",
+    entry: '/lc-fino-module-phaser/stats.js',
+    context: 'phaser',
+    version: '3.23.0'
   },
 
   {
@@ -18,20 +30,20 @@ const projectList = [
       const route= window.location.href.split(window.location.origin)[1].split('/')[1]
       return route === 'yueqi'
     },
-    domain: "http://localhost:8081",
+    domain: "http://localhost:8083",
     entry: '/yueqi/stats.js',
     prop: {},
     "context": "vue",
     "version": "2.6.2"
   },
   {
-    name: 'jinzhao',
+    name: 'module-001',
     activeWhen: function (location: Location) {
       const route= window.location.href.split(window.location.origin)[1].split('/')[1]
-      return route === 'jinzhao'
+      return route === 'module-001'
     },
-    domain: "http://localhost:8082",
-    entry: '/jinzhao/stats.js',
+    domain: "http://localhost:8085",
+    entry: '/module-001/stats.js',
     "context": "vue",
     "version": "2.6.2"
   },

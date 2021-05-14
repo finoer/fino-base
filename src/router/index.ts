@@ -20,7 +20,7 @@ class Router extends BaseRouter{
     // 将树形的模块变为键值对的形式
     this.moduleMap = this.setModuleMap(this.plantformTree.projects[0], this.projectMap)
 
-    console.log(this.moduleMap)
+    console.log('current moduleMap：',this.moduleMap)
 
     // console.log('currentTreeData',  this.plantformTree)
   }
